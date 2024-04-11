@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        hml: hml {
+        hml: homerowmodsleft {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MOD_LEFT_HAND";
+            label = "HOME_ROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
