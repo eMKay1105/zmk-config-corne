@@ -29,6 +29,15 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+
+        bspdel: bspdel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPDEL";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -42,10 +51,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J    &kp L                 &kp U               &kp Y             &kp P             &none
-&kp BACKSPACE  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M    &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp SQT
-&kp DELETE     &kp Z            &kp X            &kp C              &kp D                &kp V        &kp K    &kp H                 &kp COMMA           &kp DOT           &kp FSLH          &kp ESC
-                                                 &key_repeat        &mo 1                &kp SPACE    &kp RET  &mo 2                 &none
+&kp TAB    &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J    &kp L                 &kp U               &kp Y             &kp P             &kp SEMI
+&bspdel    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M    &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp LEFT_BRACKET
+&kp MINUS  &kp Z            &kp X            &kp C              &kp D                &kp V        &kp K    &kp H                 &kp COMMA           &kp DOT           &kp FSLH          &kp APOS
+                                             &key_repeat        &mo 1                &kp SPACE    &kp RET  &mo 2                 &kp ESC
             >;
         };
 
