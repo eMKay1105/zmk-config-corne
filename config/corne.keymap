@@ -51,9 +51,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB  &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J    &kp L                 &kp U               &kp Y             &kp P             &kp SEMI
+&kp TAB  &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J    &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
 &bspdel  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M    &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
-&none    &kp Z            &kp X            &kp C              &kp D                &kp V        &kp K    &kp H                 &kp COMMA           &kp DOT           &kp LBKT          &kp MINUS
+&none    &kp Z            &kp X            &kp C              &kp D                &kp V        &kp K    &kp H                 &kp COMMA           &kp DOT           &kp FSLH          &kp MINUS
                                            &key_repeat        &mo 1                &kp SPACE    &kp RET  &mo 2                 &kp ESC
             >;
         };
