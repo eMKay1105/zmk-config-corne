@@ -130,8 +130,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
