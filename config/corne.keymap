@@ -111,19 +111,28 @@
 
         mouse {
             bindings = <
-&trans  &trans        &trans        &trans          &trans            &trans    &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans         &trans          &trans         &trans        &trans         &trans
-&trans  &trans        &trans        &trans          &trans            &trans    &trans         &trans          &trans         &trans        &trans         &trans
-                                    &trans          &trans            &trans    &mkp RCLK      &mkp LCLK       &mkp MCLK
+&none  &none         &none         &none           &none             &none    &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none    &none          &none           &none          &none         &none          &none
+&none  &none         &none         &none           &none             &none    &none          &none           &none          &none         &none          &none
+                                   &none           &none             &none    &mkp RCLK      &mkp LCLK       &mkp MCLK
+            >;
+        };
+
+        button {
+            bindings = <
+&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
+&none  &kp LEFT_GUI   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none            &none          &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
+&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
+                                    &mkp MCLK       &mkp LCLK         &mkp RCLK        &mkp RCLK      &mkp LCLK          &mkp MCLK
             >;
         };
 
         gaming {
             bindings = <
-&kp ESCAPE  &kp TAB           &kp Q  &kp W  &kp E   &kp R    &none  &none  &none       &none  &none  &tog 6
+&kp ESCAPE  &kp TAB           &kp Q  &kp W  &kp E   &kp R    &none  &none  &none       &none  &none  &tog 7
 &kp F6      &kp LEFT_SHIFT    &kp A  &kp S  &kp D   &kp F    &none  &none  &none       &none  &none  &none
 &kp F8      &kp LEFT_CONTROL  &none  &none  &none   &kp G    &none  &none  &none       &none  &none  &none
-                                     &none  &tog 7  &none    &none  &none  &kp ESCAPE
+                                     &none  &tog 8  &none    &none  &none  &kp ESCAPE
             >;
         };
 
@@ -132,7 +141,7 @@
 &trans  &trans  &trans  &kp W   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp A   &kp S   &kp D   &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &tog 7  &trans    &trans  &trans  &trans
+                        &trans  &tog 8  &trans    &trans  &trans  &trans
             >;
         };
     };
