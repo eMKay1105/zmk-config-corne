@@ -51,6 +51,13 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        dtb: double_tap_boot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLE_TAP_BOOT";
+            #binding-cells = <0>;
+            bindings = <&none>, <&bootloader>;
+        };
     };
 
     keymap {
@@ -79,7 +86,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none              &none            &none          &none          &none
+&none    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &to 0              &none            &none          &dtb           &none
 &bspdel  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
 &none    &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &none              &none            &none          &none          &none
                             &kp DOT  &kp N0  &kp MINUS    &none  &none              &none
@@ -94,7 +101,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none    &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none  &none              &none            &none          &none          &none
+&none    &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none  &to 0              &none            &none          &dtb           &none
 &bspdel  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &none  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
 &none    &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE           &none  &none              &none            &none          &none          &none
                                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &none  &none              &none
@@ -103,7 +110,7 @@
 
         nav {
             bindings = <
-&none    &none         &none         &none           &none             &none     &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO  &none
+&none    &dtb          &none         &none           &to 0             &none     &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO  &none
 &bspdel  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none     &kp CAPSLOCK   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &none
 &none    &none         &trans        &trans          &trans            &trans    &kp INSERT     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END        &none
                                      &none           &none             &none     &kp ENTER      &none           &key_repeat
@@ -112,16 +119,16 @@
 
         fun {
             bindings = <
-&none   &kp F12  &kp F7  &kp F8              &kp F9     &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5              &kp F6     &kp SCROLLLOCK     &trans  &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2              &kp F3     &kp PAUSE_BREAK    &trans  &trans     &trans     &trans    &trans    &trans
-                         &kp K_CONTEXT_MENU  &kp SPACE  &kp TAB            &trans  &trans     &trans
+&none  &kp F12  &kp F7  &kp F8              &kp F9     &kp PRINTSCREEN    &none  &to 0      &none      &none     &dtb      &none
+&none  &kp F11  &kp F4  &kp F5              &kp F6     &kp SCROLLLOCK     &none  &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
+&none  &kp F10  &kp F1  &kp F2              &kp F3     &kp PAUSE_BREAK    &none  &none      &none      &none     &none     &none
+                        &kp K_CONTEXT_MENU  &kp SPACE  &kp TAB            &none  &none      &none
             >;
         };
 
         media {
             bindings = <
-&none  &none         &none         &none           &none             &none    &none              &none             &none              &none            &none         &none
+&none  &dtb          &none         &none           &to 0             &none    &none              &none             &none              &none            &none         &none
 &none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none    &ext_power EP_TOG  &kp C_PREVIOUS    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT    &none
 &none  &none         &none         &none           &none             &none    &out OUT_TOG       &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
                                    &none           &none             &none    &kp C_STOP         &kp C_PLAY_PAUSE  &kp C_MUTE
@@ -130,7 +137,7 @@
 
         mouse {
             bindings = <
-&none  &none         &none         &none           &none             &none    &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &none
+&none  &dtb          &none         &none           &to 0             &none    &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &none
 &none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none    &none          &none           &none          &none         &none          &none
 &none  &none         &none         &none           &none             &none    &none          &none           &none          &none         &none          &none
                                    &none           &none             &none    &mkp RCLK      &mkp LCLK       &mkp MCLK
