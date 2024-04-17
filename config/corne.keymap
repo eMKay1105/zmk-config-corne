@@ -41,6 +41,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        krlt: key_repeat_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KEY_REPEAT_LAYER_TAP";
+            bindings = <&mo>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -56,8 +66,8 @@
             bindings = <
 &kp TAB        &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
 &bspdel        &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
-&kp BACKSLASH  &lt 6 Z          &kp X            &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &kp DOT           &lt 6 SLASH       &kp MINUS
-                                                 &lt 4 ESCAPE       &lt 3 SPACE          &lt 5 TAB    &lt 2 ENTER  &lt 1 BACKSPACE       &key_repeat
+&kp BACKSLASH  &lt 7 Z          &kp X            &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &kp DOT           &lt 7 SLASH       &kp MINUS
+                                                 &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB    &lt 2 ENTER  &lt 1 BACKSPACE       &krlt 4 0
             >;
         };
 
@@ -100,6 +110,15 @@
             >;
         };
 
+        fun {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
         media {
             bindings = <
 &none  &none         &none         &none           &none             &none    &none              &none             &none              &none            &none         &none
@@ -129,10 +148,10 @@
 
         gaming {
             bindings = <
-&kp ESCAPE  &kp TAB           &kp Q  &kp W  &kp E   &kp R    &none  &none  &none       &none  &none  &tog 7
+&kp ESCAPE  &kp TAB           &kp Q  &kp W  &kp E   &kp R    &none  &none  &none       &none  &none  &tog 8
 &kp F6      &kp LEFT_SHIFT    &kp A  &kp S  &kp D   &kp F    &none  &none  &none       &none  &none  &none
 &kp F8      &kp LEFT_CONTROL  &none  &none  &none   &kp G    &none  &none  &none       &none  &none  &none
-                                     &none  &tog 8  &none    &none  &none  &kp ESCAPE
+                                     &none  &tog 9  &none    &none  &none  &kp ESCAPE
             >;
         };
 
@@ -141,7 +160,7 @@
 &trans  &trans  &trans  &kp W   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp A   &kp S   &kp D   &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &tog 8  &trans    &trans  &trans  &trans
+                        &trans  &tog 9  &trans    &trans  &trans  &trans
             >;
         };
     };
