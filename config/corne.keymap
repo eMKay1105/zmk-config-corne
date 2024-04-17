@@ -146,10 +146,10 @@
 
         button {
             bindings = <
-&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
-&none  &kp LEFT_GUI   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none            &none          &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
-&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
-                                    &mkp MCLK       &mkp LCLK         &mkp RCLK        &mkp RCLK      &mkp LCLK          &mkp MCLK
+&none    &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
+&bspdel  &kp LEFT_GUI   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &none            &none          &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
+&none    &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT   &kp C_AC_UNDO  &none
+                                      &mkp MCLK       &mkp LCLK         &mkp RCLK        &mkp RCLK      &mkp LCLK          &mkp MCLK
             >;
         };
 
