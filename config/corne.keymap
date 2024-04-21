@@ -158,16 +158,16 @@
 &kp ESCAPE  &kp TAB           &kp Q  &kp W  &kp E      &kp R    &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &to 9
 &kp M       &kp LEFT_SHIFT    &kp A  &kp S  &kp D      &kp F    &none           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
 &kp J       &kp LEFT_CONTROL  &kp I  &none  &kp C      &kp G    &none           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &to 0
-                                     &to 9  &kp SPACE  &none    &none           &none            &none
+                                     &to 9  &kp SPACE  &none    &none           &none            &to 0
             >;
         };
 
         gaming2 {
             bindings = <
-&trans  &kp TAB    &trans  &kp W   &trans     &trans    &trans  &trans  &trans  &trans  &trans  &to 8
-&trans  &kp LSHFT  &kp A   &kp S   &kp D      &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &to 0
-                           &to 8   &kp SPACE  &trans    &trans  &trans  &trans
+&trans  &kp TAB    &trans  &kp W   &trans     &trans    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+&trans  &kp LSHFT  &kp A   &kp S   &kp D      &trans    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp F7
+&trans  &kp LCTRL  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &kp F8
+                           &to 8   &kp SPACE  &trans    &trans  &trans  &to 0
             >;
         };
     };
