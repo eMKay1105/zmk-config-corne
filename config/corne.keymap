@@ -71,10 +71,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
-&bspdel        &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
-&kp LESS_THAN  &lt 7 Z          &kp X            &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &kp DOT           &lt 7 SLASH       &kp MINUS
-                                                 &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB    &lt 2 ENTER  &lt 1 BACKSPACE       &krlt 4 0
+&kp TAB               &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
+&bspdel               &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
+&kp NON_US_BACKSLASH  &lt 7 Z          &kp X            &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &kp DOT           &lt 7 SLASH       &kp MINUS
+                                                        &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB    &lt 2 ENTER  &lt 1 BACKSPACE       &krlt 4 0
             >;
         };
 
