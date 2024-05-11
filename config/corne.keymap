@@ -33,9 +33,9 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        bspdel: bspdel {
+        bspdel: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "BSPDEL";
+            label = "BACKSPACE_DELETE";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
@@ -58,6 +58,16 @@
             #binding-cells = <0>;
             bindings = <&none>, <&bootloader>;
         };
+
+        bspdellt: backspace_delete_layertap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE_DELETE_LAYERTAP";
+            bindings = <&mo>, <&bspdel>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -71,10 +81,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB               &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
-&bspdel               &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
+&none                 &kp Q            &kp W            &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y             &kp LBKT          &kp SEMI
+&none                 &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &kp G        &kp M        &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RIGHT_GUI O  &kp APOS
 &kp NON_US_BACKSLASH  &lt 7 Z          &kp X            &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &kp DOT           &lt 7 SLASH       &kp MINUS
-                                                        &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB    &lt 2 ENTER  &lt 1 BACKSPACE       &krlt 4 0
+                                                        &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB    &lt 2 ENTER  &krlt 1 0             &bspdellt 4 0
             >;
         };
 
