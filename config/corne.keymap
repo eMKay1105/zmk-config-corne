@@ -111,10 +111,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none                 &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none  &to 0              &none            &none          &dtb           &none
-&bspdel               &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &none  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
-&kp NON_US_BACKSLASH  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE           &none  &none              &none            &none          &none          &none
-                                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &none  &none              &none
+&none                 &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE    &none  &to 0              &none            &none          &dtb           &none
+&none                 &kp COLON       &kp DOLLAR       &kp PERCENT   &kp CARET             &kp PLUS           &none  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
+&kp NON_US_BACKSLASH  &kp TILDE       &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp PIPE           &none  &none              &none            &none          &none          &none
+                                                       &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LS(SLASH)      &none  &none              &none
             >;
         };
 
