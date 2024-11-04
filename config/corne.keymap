@@ -107,6 +107,15 @@
             mods = <(MOD_RALT)>;
         };
 
+        umlaut: umlaut {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UMLAUT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+        };
+
         hmaul: homerow_mod_a_umlaut_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_A_UMLAUT_LEFT";
@@ -116,13 +125,23 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
         };
+
+        hmul: homerow_mod_umlaut_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_UMLAUT_LEFT";
+            bindings = <&kp>, <&umlaut>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+        };
     };
 
     macros {
         homerow_mod_umlaut_macro: homerow_mod_umlaut_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>, <&macro_press>;
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1>, <&macro_param_2to2>;
 
             label = "HOMEROW_MOD_UMLAUT_MACRO";
         };
