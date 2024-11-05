@@ -104,10 +104,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none          &to 0              &none            &none         &dtb          &none
-&bspdel  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none    &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none          &none              &none            &none         &none         &none
-                            &kp DOT  &kp N0  &kp MINUS    &none          &none              &none
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none          &to 0              &none            &none         &dtb          &none
+&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none          &none              &none            &none         &none         &none
+                          &kp DOT  &kp N0  &kp MINUS    &none          &none              &none
             >;
         };
 
@@ -128,10 +128,10 @@
 
         nav {
             bindings = <
-&none    &dtb          &none         &none           &to 0             &none            &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO  &none
-&bspdel  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT    &kp CAPSLOCK   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &none
-&none    &none         &trans        &trans          &trans            &trans           &kp INSERT     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END        &none
-                                     &none           &none             &none            &kp ENTER      &none           &key_repeat
+&none  &dtb          &none         &none           &to 0             &none            &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY   &kp C_AC_CUT  &kp C_AC_UNDO  &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT    &kp CAPSLOCK   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &none
+&none  &none         &trans        &trans          &trans            &trans           &kp INSERT     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END        &none
+                                   &none           &none             &none            &kp ENTER      &none           &none
             >;
         };
 
@@ -164,10 +164,10 @@
 
         button {
             bindings = <
-&none    &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT  &kp C_AC_UNDO  &none
-&bspdel  &kp LEFT_GUI   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT    &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI   &none
-&none    &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT  &kp C_AC_UNDO  &none
-                                      &mkp MCLK       &mkp LCLK         &mkp RCLK        &mkp RCLK      &mkp LCLK          &mkp MCLK
+&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT  &kp C_AC_UNDO  &none
+&none  &kp LEFT_GUI   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp RIGHT_ALT    &kp RIGHT_ALT  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI   &none
+&none  &kp C_AC_UNDO  &kp C_AC_CUT  &kp C_AC_COPY   &kp C_AC_PASTE    &kp C_AC_REDO    &kp C_AC_REDO  &kp C_AC_PASTE     &kp C_AC_COPY    &kp C_AC_CUT  &kp C_AC_UNDO  &none
+                                    &mkp MCLK       &mkp LCLK         &mkp RCLK        &mkp RCLK      &mkp LCLK          &mkp MCLK
             >;
         };
 
