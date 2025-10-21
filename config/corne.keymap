@@ -93,7 +93,7 @@
 &kp PIPE   &kp Q            &kp W            &kp F              &kp P                &kp B               &kp J             &kp L                 &kp U               &kp Y            &kp LBKT         &kp SEMI
 &kp RA(Q)  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LEFT_CONTROL T  &hml RIGHT_ALT G    &hmr RIGHT_ALT M  &hmr RIGHT_CONTROL N  &hmr RIGHT_SHIFT E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp APOS
 &kp RA(E)  &lt 7 Z          &kp X            &kp C              &kp D                &kp V               &kp K             &kp H                 &kp COMMA           &kp DOT          &lt 7 SLASH      &kp MINUS
-                                             &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB           &lt 2 ENTER       &bspdellt 1 0         &krlt 4 0
+                                             &lt 5 ESCAPE       &lt 3 SPACE          &lt 6 TAB           &lt 2 ENTER       &krlt 1 0             &bspdellt 4 0
             >;
         };
 
